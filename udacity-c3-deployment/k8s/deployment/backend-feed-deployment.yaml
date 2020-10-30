@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -6,13 +6,16 @@ metadata:
   name: backend-feed
 spec:
   replicas: 3
+  selector:
+   matchLabels:
+       service: backend-feed
   template:
     metadata:
       labels:
         service: backend-feed
     spec:
       containers:
-        - image: omerfarukakdag/udacity-restapi-feed
+        - image: sunilbabutvm/udacity-restapi-feed
           name: backend-feed
           imagePullPolicy: Always
           resources:
@@ -28,11 +31,11 @@ spec:
                 configMapKeyRef:
                   name: env-config
                   key: URL
-            - name: AWS_MEDIA_BUCKET
+            - name: AWS_BUCKET
               valueFrom:
                 configMapKeyRef:
                   name: env-config
-                  key: AWS_MEDIA_BUCKET
+                  key: AWS_BUCKET
             - name: AWS_PROFILE
               valueFrom:
                 configMapKeyRef:

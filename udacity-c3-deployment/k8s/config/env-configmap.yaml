@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_MEDIA_BUCKET: ___INSERT_AWS_MEDIA_BUCKET___
-  AWS_PROFILE: ___INSERT_AWS_PROFILE___
-  AWS_REGION: ___INSERT_AWS_REGION___
-  JWT_SECRET: ___INSERT_JWT_SECRET___
-  POSTGRES_DATABASE: ___INSERT_POSTGRES_DATABASE___
-  POSTGRES_HOST: ___INSERT_POSTGRES_HOST___
+  AWS_BUCKET: udacity-415140894837-test
+  AWS_PROFILE: AKIAIALQR3HGHG6ZCRHQ
+  AWS_REGION: us-east-2
+  JWT_SECRET: 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
+  POSTGRES_DATABASE: dbudagram
+  POSTGRES_HOST: dbudagram.c8uua0plyoky.us-east-2.rds.amazonaws.com
   URL: http://localhost:8100
 metadata:
   name: env-config
