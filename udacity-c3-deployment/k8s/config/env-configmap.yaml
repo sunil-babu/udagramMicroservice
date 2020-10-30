@@ -2,9 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 data:
   AWS_BUCKET: udacity-415140894837-test
-  AWS_PROFILE: AKIAIALQR3HGHG6ZCRHQ
+  AWS_PROFILE: default
   AWS_REGION: us-east-2
-  JWT_SECRET: nDewu5u1jn1XSO+TZmTkLQdFwsX2fpX5CaxKeold
+  JWT_SECRET: hello
   POSTGRES_DATABASE: dbudagram
   POSTGRES_HOST: dbudagram.c8uua0plyoky.us-east-2.rds.amazonaws.com
   URL: http://localhost:8100
